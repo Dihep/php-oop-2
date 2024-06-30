@@ -16,9 +16,17 @@ include __DIR__ . "/data.php";
 
 <body>
 
-<h1>
-    <?= $devSays ?>
-</h1> 
+<h1>I nostri prodotti</h1> 
+<div id="containerProdotti">
+
+    <?php foreach ($prodotti as $prodotto) { ?>
+        <div class="cardProdotto">
+            <?php $prodotto->stampa() ?>
+        </div>
+    <?php } ?>
+
+</div>
+
     
 </body>
 </html>
